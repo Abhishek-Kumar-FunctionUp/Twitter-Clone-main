@@ -5,7 +5,6 @@ import CustomButton from "../../../Atom/Button/CustomButton";
 import VerifiedIcon from '@mui/icons-material/Verified';
 
 function Righthomebox2() {
-  const [ show , setShow]= useState(false)
  
   const [followContainer, setFollowContainer] = useState([
     
@@ -77,7 +76,7 @@ function Righthomebox2() {
   }
   return (
     <div className={style.container}>
-      <h1>Who to follow</h1>
+      <h1 className={style.follow}>Who to follow</h1>
       <div className={style.main}>
         {trending.map((menu,id) => {
           return (

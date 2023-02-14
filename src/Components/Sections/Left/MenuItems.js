@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { FaTwitter } from "react-icons/fa";
 import { FaHouseUser, FaHashtag} from "react-icons/fa";
-// import { GrNotification } from "react-icons/gr";
 import { BsBookmark, BsPerson } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { TbFileText } from "react-icons/tb";
@@ -68,7 +67,7 @@ function LeftSec() {
               return (
                 <div className={style.sidebar} key={index}>
                   <div className={style.sidebarOption} >
-                    <h2>{menu.icon}</h2>
+                    <h2 className={style.text}>{menu.icon}</h2>
                     <span>{menu.Name}</span>
                   </div>
                 </div>
@@ -98,7 +97,7 @@ function LeftSec() {
               picture={
                 <Avatar
                   alt="Remy Sharp"
-                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  src="https://cdn2.vectorstock.com/i/1000x1000/58/26/creative-hexagonal-technology-logo-design-vector-26885826.jpg"
                 />
               }
               text={Data[getLocalStorageIndex].Name}

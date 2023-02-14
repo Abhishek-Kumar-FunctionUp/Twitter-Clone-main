@@ -22,7 +22,7 @@
 .mainContainer h1{
     color: white;
     font-size: 1.93rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
    
 }
 .logo{
@@ -93,7 +93,7 @@ margin-left: 0;
 padding-left: 0px;
 }
 .toggle{
-    color:#1677B8;
+    color:#1A8CD8;
 }
 .signupbtn p{
     font-size: 13px;
@@ -141,7 +141,8 @@ padding-left: 0px;
     margin-bottom: 20vh;
 }
 .input1, .input2{
-    width:20rem;
+    width:60vw;
+    height:6vh
 }
 .form{
     width:100vw;
@@ -153,12 +154,12 @@ padding-left: 0px;
     margin-bottom: 1vh;
 }
 .dob{
-    width:20rem;
+    width:60vw;
     margin-bottom: 1vh;
 }
 .formbtn{
-    margin-top: 20vh;
-    width:20rem;
+    margin-top: 10vh;
+    width:50vw;
 }
 
 }

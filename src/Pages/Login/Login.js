@@ -3,7 +3,7 @@ import style from "./Login.module.css";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom,forLocalStorageIndex } from "../../Recoil/Atom";
 
@@ -37,7 +37,7 @@ function Login() {
 
     let flagForLs = 0;
     //for (var i = 0; i < localStorage.length; i++) {
-      if(localStorage.length==0)
+      if(localStorage.length===0)
       {
         alert("LocalStorage is empty")
       }
@@ -46,7 +46,7 @@ function Login() {
       let k = JSON.parse(localStorage.getItem("user"));
       k.map((element,i)=>{
         console.log(element.Email)
-        if (element.Email === loginv || element.Name === loginv || element.Phone == loginv) {
+        if (element.Email === loginv || element.Name === loginv || element.Phone === loginv) {
           flagForLs = 1;
           //const store=i;
           console.log(element.Email)
@@ -58,13 +58,10 @@ function Login() {
       })
       
       }
-    //}
-    //console.log(flagForLs)
-      
-    //}
-    if (flagForLs == 1 && flag == 0) {
+    
+    if (flagForLs === 1 && flag === 0) {
       setNextBtn(true);
-    } else if (flagForLs == 0) {
+    } else if (flagForLs === 0) {
       setNextBtn(false);
       setLoginError("User Not Found");
     }
@@ -82,7 +79,7 @@ function Login() {
       flagForLs = 1;
     }
   
-    if (flagForLs == 1) {
+    if (flagForLs === 1) {
       setLoginStatus(true);
       alert("succesfully login");
       

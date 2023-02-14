@@ -8,19 +8,28 @@ function RightSide() {
   return (
     <div className={style.container}>
       <div>
-      <Search />
-      </div>
-       <div>
-      <Trends />
+        <Search />
       </div>
       <div>
-      <RightContainer2 />
+        <Trends />
+      </div>
+      <div>
+        <RightContainer2 />
       </div>
       <div className={style.copyright}>
-        <h6>
-          Terms of Service Privacy Policy Cookie Policy Accessibility Ads info
-          More... <span>© 2023 </span> Twitter, Inc.
-        </h6>
+        <h5>
+          <a href="https://twitter.com/en/tos">Terms of Service</a> &nbsp;&nbsp;<a href="https://twitter.com/en/privacy">Privacy Policy</a>&nbsp;&nbsp;
+          <a href="https://help.twitter.com/en/rules-and-policies/twitter-cookies">
+            Cookie Policy{" "}
+          </a>
+          <a href="https://help.twitter.com/en/resources/accessibility">
+            Accessibility{" "}
+          </a>&nbsp;&nbsp;
+          <a href="https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo">
+            Ads info
+          </a>&nbsp;&nbsp; More... &nbsp;&nbsp;<span>© 2023 </span> Twitter,
+          Inc.
+        </h5>
       </div>
     </div>
   );

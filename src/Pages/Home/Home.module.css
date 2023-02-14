@@ -18,3 +18,19 @@
 /* .main::-webkit-scrollbar{
     display: none;
 } */
+.floatingBtn{
+    display: none;
+}
+@media screen and (max-width:600px){
+    .container{
+        display: none;
+    }
+    .rightContainer{
+        display: none
+    }
+    .floatingBtn{
+        display: unset;
+        margin-top: 80vh;
+        margin-left: 40vw;
+    }
+}

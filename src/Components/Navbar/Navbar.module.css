@@ -8,8 +8,14 @@
 
   padding: 0.93rem 1.25rem;
 }
+.twitty{
+  display: none;
+}
+.drawer{
+  display: none;
+}
 
-.feed__header h2 {
+.home {
   font-size: 1.25rem;
   font-weight: 50rem;
   color:white;
@@ -21,4 +27,23 @@
   color: white;
   margin-top: 2rem;
   z-index: 5;
+}
+
+@media screen and (max-width:600px){
+  .home{
+    display:none;
+  }
+  .twitty{
+    display:unset;
+    color:#1A8CD8;
+    margin-left: 33vw;
+    font-size: 1.6rem;
+    
+  }
+  .avatar{
+    display: unset;
+  }
+  .drawer{
+    display: flex;
+  }
 }

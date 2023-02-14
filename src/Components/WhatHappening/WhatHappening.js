@@ -5,12 +5,8 @@ import { FiCamera } from "react-icons/fi";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
-import { tweetPosts } from "../../ConstData/ConstData";
-import { useEffect } from "react";
-import { useRecoilState,useRecoilValue, useSetRecoilState } from "recoil";
-
-import { isTweetPost,Personaltweet,forLocalStorageIndex,countForTweet } from "../../Recoil/Atom";
-import { json } from "react-router-dom";
+import { useRecoilState,useRecoilValue } from "recoil";
+import { isTweetPost,Personaltweet,forLocalStorageIndex } from "../../Recoil/Atom";
 
 function WhatHappening() {
   let Data = JSON.parse(localStorage.getItem("user"));
@@ -70,6 +66,7 @@ function WhatHappening() {
     };
     let oldData = JSON.parse(localStorage.getItem("constTweetPosts"))
     localStorage.setItem("constTweetPosts" , JSON.stringify([{...newObj},...oldData]))
+    // localStorage.setImage("userTweet", JSON.stringify([{...newObj}]))
 
    // tweetPosts.unshift(newObj);
     setLoginStatus(loginStatus + 1);

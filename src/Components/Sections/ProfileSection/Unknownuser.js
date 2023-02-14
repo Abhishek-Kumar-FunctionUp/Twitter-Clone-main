@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import style from "./ProfileSection.module.css";
-// import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import WestIcon from "@mui/icons-material/West";
 import CustomButton from "../../../Atom/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
@@ -15,8 +13,6 @@ import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import style2 from "./Unknownuser.module.css"
-import Profile from "../../../Pages/Profile/Profile";
-import Profile2 from "../../../Pages/Profile2/Profile2";
 
 
 function ProfileSection() {
@@ -62,12 +58,13 @@ function ProfileSection() {
           </span>
         </div>
         <div className={style.textcontaint}>
-          <h4>{`Name:- ${unknownProfileData.name}`}</h4>
-          <h5>{`${unknownProfileData.handlerName}`}</h5>
-          <h5>{`${"tweetCount:-"}${unknownProfileData.tweetCount}`}</h5>
-          <h5>{`${"likescount:-"}${unknownProfileData.likesCount}`}</h5>
-          <h5>{`${"followers:-"}${unknownProfileData.followers}`}</h5>
-          <h5>{`${"followings:-"}${unknownProfileData.followings}`}</h5>
+          <h4>{unknownProfileData.name}</h4>
+          <p>{unknownProfileData.handlerName}</p>
+          <h5 style={{marginTop:'1rem',fontSize:'1.2rem'}}></h5>
+          <p>{`${"TweetCount"} ${unknownProfileData.tweetCount}`}</p>
+          <p>{`${"Likescount"} ${unknownProfileData.likesCount}`}</p>
+          <h5 style={{marginTop:'1rem',fontSize:'1.2rem'}}></h5>
+          <p>{`${unknownProfileData.followers}  ${"Followers "}`}<span style={{marginLeft:"2rem"}}>{`${unknownProfileData.followings}  ${"Followings "}`}</span></p>
         </div>
       </div>
       <div>
@@ -108,13 +105,14 @@ function ProfileSection() {
                         <span className={style2.text}>
                           <h3>{unknownProfileData.name}<VerifiedIcon style={{ color: "#1DA1F2" }} /></h3>
                         </span>
+                        <br/>
                         <p>{x.tweetText}</p>
                       </div>
                     </div>
 
                     <div className={style2.img}>
                       <img
-                        style={{ width: "30rem", height: "30rem", borderRadius: "15px" }}
+                        // style={{ width: "30rem", height: "30rem", borderRadius: "15px" }}
                         alt="picture"
                         src={x.tweetPic}
                       />
@@ -130,7 +128,7 @@ function ProfileSection() {
                       </span>
                       <span>
                         {x.likesCount}
-                        <FavoriteBorderIcon />
+                        <FavoriteBorderIcon onClick={handleLike}/>
                       </span>
                       <span>
                         {x.viewsCount}

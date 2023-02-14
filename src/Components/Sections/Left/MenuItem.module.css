@@ -5,7 +5,7 @@
   }
   
   body {
-    color: #50b7f5;
+    color: #1A8CD8;
     --twitter-background: #e6ecf0;
    
   }
@@ -31,7 +31,7 @@
   }
 
   
-  .sidebarOption h2 {
+  .text {
     font-weight: 00;
     font-size: 1.641rem;
     color: rgb(231, 233, 234);

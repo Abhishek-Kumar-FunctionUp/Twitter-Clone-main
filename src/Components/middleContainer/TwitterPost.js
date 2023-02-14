@@ -15,11 +15,9 @@ import Dialog from "@mui/material/Dialog";
 import {
   isTweetPost,
   userProfile,
-  requestedProfileAtom,
   forPassingId
 } from "../../Recoil/Atom";
 import {  useNavigate } from "react-router-dom";
-import { tweetPosts } from "../../ConstData/ConstData";
 import TweetReply from "../../Atom/TweetReply/TweetReply";
 
 export default function TwitterPost() {
@@ -128,19 +126,16 @@ function handleClickOpen (index) {
                     <VerifiedIcon style={{ color: "#1DA1F2",fontSize:'20px',marginLeft:'4px'}} />
                   </h3>
                 </span>
-                <h4>{data.handlerName}</h4>
-                <h4>{data.tweetText}</h4>
+                <p>{data.handlerName}</p>
+                <br/>
+                <p>{data.tweetText}</p>
               </div>
             </div>
 
             <div className={style.img}>
               {data?.tweetPic ? 
               <img
-                style={{
-                  width: "30rem",
-                  height: "30rem",
-                  borderRadius: "15px",
-                }}
+              
                 alt="picture"
                 src={data.tweetPic}
               /> : <></> }

@@ -10,13 +10,13 @@ function DialogBox(props) {
   
 
   const setLoginStatus = useSetRecoilState(isLoginAtom);
-  const { onClose, selectedValue, open } = props;
+  const { onClose, selectedValue } = props;
   const handleClose = () => {
     onClose(selectedValue);
   };
   function handaleClick() {
-    let text = 'Do You Logout ! \nEither Ok or Cancel';
-      if(window.confirm (text) == true){
+    let text = 'Do You Want To Logout ! \nEither Ok or Cancel';
+      if(window.confirm (text) === true){
           setLoginStatus(false);
     alert("successfully Logout");
       } else {

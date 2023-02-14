@@ -6,6 +6,7 @@ import style from "./Profile.module.css"
 import { useRecoilValue } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom";
 import { useNavigate } from "react-router-dom";
+import MobileIcons from '../../Atom/MobileIcons/MobileIcons'
 function Profile() {
 
     const isUserLoggedIn = useRecoilValue(isLoginAtom);
@@ -32,8 +33,10 @@ function Profile() {
       <div className={style.rightContainer}>
         <RightSide />
       </div>
+ <MobileIcons />
     </div>
     </div>
+
   )
 }
 

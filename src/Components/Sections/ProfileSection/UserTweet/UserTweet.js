@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import style2 from "./UserTweet.module.css"
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -7,15 +7,20 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
-import {Personaltweet} from "../../../../Recoil/Atom"
-import { useRecoilState } from 'recoil'
+import {forLocalStorageIndex} from "../../../../Recoil/Atom"
+import { useRecoilValue } from 'recoil'
 
 function UserTweet() {
-    const [data,setData]= useRecoilState(Personaltweet)
-    console.log(data);
+    const [data,setData]= useState([])
+    const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
+    let tweetData = JSON.parse(localStorage.getItem("constTweetPosts"))
+    let Data = JSON.parse(localStorage.getItem("user"));
+    let filteredData = tweetData.filter((e)=>e.handlerName===Data[getLocalStorageIndex].Email)
+    console.log(filteredData, "usertweets")
+  
   return (
     <>
-    {data?.map((x)=>{
+    {filteredData?.map((x)=>{
         return(
             <div className={style2.wrapper}>
             <div className={style2.container1}>
@@ -36,14 +41,8 @@ function UserTweet() {
                     <div className={style2.img}>
      
               <img
-                style={{
-                  width: "30rem",
-                  height: "30rem",
-                  borderRadius: "15px",
-                }}
                 alt="picture"
-                src={x.tweetPic
-                }
+                src={x.tweetPic}
               /> 
               {/* : <></> } */}
                     </div>

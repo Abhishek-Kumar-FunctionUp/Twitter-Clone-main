@@ -53,8 +53,10 @@
 
   .btn2{
     background: none;
-    color: blueviolet;
+    color: #1A8CD8;
     font: 2px;
+    font-weight: 800;
+    margin-left: 0.5vw;
     border: none;
    outline: none;
   }

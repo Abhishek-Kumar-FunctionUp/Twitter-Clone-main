@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import MenuItems from "../../Components/Sections/Left/MenuItems"
 // import Unknownuser from '../../Components/Sections/ProfileSection/Unknownuser'
 import RightSide from '../../Components/Sections/Right/RightSide'

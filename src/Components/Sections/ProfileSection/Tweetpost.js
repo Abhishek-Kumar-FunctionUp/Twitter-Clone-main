@@ -43,7 +43,6 @@ function Tweetpost() {
 
         <div className={style2.img}>
           <img
-            style={{ width: "30rem", height: "30rem", borderRadius: "15px" }}
             alt="picture"
             src={tweetPostData.tweetPic}
           />

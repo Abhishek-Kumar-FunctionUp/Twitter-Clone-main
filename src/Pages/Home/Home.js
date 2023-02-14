@@ -6,6 +6,9 @@ import RightSide from "../../Components/Sections/Right/RightSide";
 import MiddleContainer from "../../Components/Sections/Middle/MiddleContainer";
 import { isLoginAtom } from "../../Recoil/Atom";
 import { useNavigate } from "react-router-dom";
+import MobileIcons from "../../Atom/MobileIcons/MobileIcons";
+import Drawer from "../../Components/Drawer/Drawer";
+import FloatingActionButtons from "../../Atom/FloatingButton/FloatingButton";
 
 function Home() {
   const isUserLoggedIn = useRecoilValue(isLoginAtom);
@@ -18,6 +21,7 @@ function Home() {
   });
 
   return (
+    <>
     <div className={style.Main}>
       <div className={style.container}>
         <MenuItems />
@@ -28,7 +32,14 @@ function Home() {
       <div className={style.rightContainer}>
         <RightSide />
       </div>
+      <div className={style.floatingBtn}>
+     <FloatingActionButtons />
+     </div>
     </div>
+    <div className={style.mobileIcons}>
+        <MobileIcons />
+      </div>
+      </>
   );
 }
 

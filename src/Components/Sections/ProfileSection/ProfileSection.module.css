@@ -15,7 +15,7 @@
       position: sticky;
     }
     
-    .feed__header h2 {
+    .userName {
       font-size: 1.25rem;
       font-weight: 50rem;
       color:white;
@@ -30,7 +30,7 @@
   }
   .Avatarsection{
       display: flex;
-      gap: 20rem;
+    justify-content: space-between;
   }
   .img{
      width: 8rem;
@@ -45,7 +45,7 @@
       width: 7.225rem;
       height: 2.25rem;
       border-radius: 25px;
-      margin-left: 2.5rem;
+      margin-right: 2vw;
       margin-top: 1rem;
     font-size: 1rem;
     border: 1rem ;
@@ -66,4 +66,29 @@
   }
   .followerscont{
     margin-top: 1.2rem;
+  }
+
+  @media screen and (max-width:600px){
+    .wrapper{
+      width: 100vw;
+    }
+    .userName{
+     font-size: 1rem;
+    }
+
+    .btn{
+    display: none;
+    }
+    .container{
+      width: 100vw;
+      height: 10vh;
+    }
+    .img{
+      margin-top: -5vh;
+      width: 18vw;
+      height: 8vh;
+    }
+    .nameData{
+      font-size: 1rem;
+    }
   }
